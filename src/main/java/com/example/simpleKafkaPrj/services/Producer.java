@@ -17,7 +17,7 @@ public class Producer {
     {
         for(Integer s : stringList)
         {
-            ProducerRecord<String, Integer> record = new ProducerRecord<>("topic2", "myKey", s);
+            ProducerRecord<String, Integer> record = new ProducerRecord<>("topic2", "myKey1 ", s);
             kafkaTemplate.send(record);
         }
     }
