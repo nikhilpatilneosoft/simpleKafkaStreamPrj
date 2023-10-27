@@ -11,13 +11,13 @@ import java.util.List;
 public class Producer {
 
     @Autowired
-    private KafkaTemplate<String, Integer> kafkaTemplate;
+    private KafkaTemplate<String, String> kafkaTemplate;
 
-    public void sendString(List<Integer> stringList)
+    public void sendString(List<String> stringList)
     {
-        for(Integer s : stringList)
+        for(String s : stringList)
         {
-            ProducerRecord<String, Integer> record = new ProducerRecord<>("topic2", "myKey1 ", s);
+            ProducerRecord<String, String> record = new ProducerRecord<>("topic2", "myKey1 ", s);
             kafkaTemplate.send(record);
         }
     }

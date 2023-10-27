@@ -24,21 +24,22 @@ public class SimpleKafkaPrjApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		System.out.println("Ready");
 
-//		List<String> stringArrayList = new ArrayList<>();
-//
-//		String s1 = "My";
-//		stringArrayList.add(s1);
-//		String s2 = "Name";
-//		stringArrayList.add(s2);
-//		String s3 = "is";
-//		stringArrayList.add(s3);
-//		String s4 = "John";
-//		stringArrayList.add(s4);
-//
-//		producerController.setStringArrayList(stringArrayList);
+		List<String> stringArrayList = new ArrayList<>();
 
-		List<Integer> integerArrayList = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7));
+		String s1 = "My";
+		stringArrayList.add(s1);
+		String s2 = "Name";
+		stringArrayList.add(s2);
+		String s3 = "is";
+		stringArrayList.add(s3);
+		String s4 = "John";
+		stringArrayList.add(s4);
+		String s5 = "konegton";
+		stringArrayList.add(s5);
 
-		producerController.setIntegerArrayList(integerArrayList);
+		producerController.setStringArrayList(stringArrayList);
+
+//		List<Integer> integerArrayList = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7));
+//		producerController.setIntegerArrayList(integerArrayList);
 	}
 }

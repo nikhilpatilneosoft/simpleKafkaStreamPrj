@@ -27,7 +27,7 @@ public class producerController {
 
     @GetMapping("/send")
     public ResponseEntity<String> send() {
-        producer.sendString(integerArrayList);
+        producer.sendString(stringArrayList);
         countStream.countStreamProp();
         return ResponseEntity.ok().build();
     }

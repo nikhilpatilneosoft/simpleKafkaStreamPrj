@@ -31,7 +31,7 @@ public class CountStream {
         TimeWindows timeWindows = TimeWindows.of(Duration.ofMinutes(2));
 
         StreamsBuilder builder = new StreamsBuilder();
-        KStream<String, Integer> firstStream = builder.stream("topic2", Consumed.with(Serdes.String(), Serdes.Integer()));
+        KStream<String, String> firstStream = builder.stream("topic2", Consumed.with(Serdes.String(), Serdes.String()));
 
         firstStream.peek((key, value) -> System.out.println("Key: " + key+ " Value: "+ value))
                 .groupByKey()
